@@ -3,7 +3,7 @@ import Menu from '../../components/Menu';
 import { enroll } from '../../actions/pmeActions';
 
 const mapDispatchToProps = dispatch => ({
-  enroll: enrolled => dispatch(enroll(enrolled))
+  enroll: () => dispatch(enroll(true))
 });
 
 export default connect(null, mapDispatchToProps)(Menu);

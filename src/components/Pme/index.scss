@@ -1,0 +1,12 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  button {
+    flex-basis: 100%;
+  }
+}
+
+.equation {
+  margin: 15px 0;
+}

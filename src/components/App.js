@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Menu from '../containers/Menu';
-import Pme from './Pme';
+import Pme from '../containers/Pme';
 
 class App extends Component {
   render() {

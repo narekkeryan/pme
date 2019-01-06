@@ -22,6 +22,7 @@ class Options extends Component {
               value={this.props.degree}
               onChange={this.handleChange}
               step={1}
+              disabled
             />
           </Label>
         </FormGroup>
@@ -35,6 +36,7 @@ class Options extends Component {
               value={this.props.m}
               onChange={this.handleChange}
               step={1}
+              disabled
             />
           </Label>
         </FormGroup>
@@ -48,6 +50,7 @@ class Options extends Component {
               value={this.props.h}
               onChange={this.handleChange}
               step={1}
+              disabled
             />
           </Label>
         </FormGroup>

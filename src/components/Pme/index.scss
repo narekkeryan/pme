@@ -1,12 +1,17 @@
-.flex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  button {
-    flex-basis: 100%;
+.pme {
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    button {
+      flex-basis: 100%;
+    }
   }
-}
-
-.equation {
-  margin: 15px 0;
+  .equation {
+    margin: 15px 0;
+  }
+  button {
+    width: 100%;
+    margin: 15px 0;
+  }
 }

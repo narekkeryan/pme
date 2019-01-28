@@ -6,7 +6,7 @@ import Options from '../../containers/Pme/Options';
 import Equation from './Equation';
 import A from '../../containers/Pme/A';
 import X from '../../containers/Pme/X';
-import { multiply, derivative } from '../../utils/lib';
+import { multiply, derivative, add, combine, E, contrast, inverse } from '../../utils/lib';
 
 class Pme extends Component {
   handleEnrollment = e => {
@@ -20,7 +20,7 @@ class Pme extends Component {
     // derivatives
     // k degree of derivative
     let K = 0;
-    while (K <= 4) {
+    while (K <= 0) {
       console.log('K:', K);
 
       // A derivative
@@ -37,10 +37,21 @@ class Pme extends Component {
       // Y derivative
       const _Y = derivative(Y, K, h, 't');
 
-      console.log('_A:', _A);
-      console.log('_X:', _X);
-      console.log('_Y:', _Y);
-      
+      console.log(`A(${K}):`, _A);
+      console.log(`X(${K}):`, _X);
+      console.log(`Y(${K}):`, _Y);
+
+      // start iterations
+      const minusD = [
+        ...combine(add(multiply(_A[1], _Y), _A[3]), add(multiply(_A[0], _Y), _A[2])),
+        ...combine(_X, E(2, '-'))
+      ];
+      const D = contrast(minusD);
+      const $D = inverse(D);
+
+      console.log('D', D);
+      console.log('$D', $D);
+
       K++;
     }
   };

@@ -17,6 +17,8 @@ class Pme extends Component {
     console.log('X:', X);
     console.log('Y:', Y);
 
+    console.log('H:', h);
+
     // derivatives
     // k degree of derivative
     let K = 0;
@@ -49,8 +51,9 @@ class Pme extends Component {
       const D = contrast(minusD);
       const $D = inverse(D);
 
-      console.log('D', D);
-      console.log('$D', $D);
+      console.log('minusD:', minusD);
+      console.log('D:', D);
+      console.log('$D:', $D);
 
       K++;
     }

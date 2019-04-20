@@ -82,7 +82,19 @@ export const contrast = a => {
 };
 
 export const inverse = a => {
-  // TODO: make dynamic
+  const augmented = a;  
+  // const augmented = combine(a, E(a.length));
+  /* for (let i = 0; i < a.length; i++) {
+
+  } */
+  const m = [];
+  for (let i = 0; i < augmented.length; i++) {
+    m.push([]);
+    for (let j = 0; j < a[i].length; j++) {
+      m[i].push(`(${augmented[i][j]}) / (${augmented[i][i]})`);
+    }
+  }
+  return m;
 };
 
 // Returns the inverse of matrix `M`.
